@@ -1,4 +1,5 @@
 gradio
+wikipedia
 wikipedia-api
 transformers
 torch

@@ -1,3 +1,4 @@
+import os
 import gradio as gr
 import wikipedia
 import wikipediaapi
@@ -71,3 +72,5 @@ with gr.Blocks() as demo:
     reset_button.click(reset_chat, outputs=chatbot_ui)
 
 demo.launch()
+port = int(os.environ.get("PORT", 7860))
+demo.launch(server_name="0.0.0.0", server_port=port)
